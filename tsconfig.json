@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",            // Modern JS output
+    "module": "CommonJS",          // Node.js module system
+    "moduleResolution": "node",
+    "outDir": "./dist",            // compiled JS files
+    "rootDir": "./src",            // source TS files
+    "esModuleInterop": true,       // allows import of CommonJS modules
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                // strict type checking
+    "skipLibCheck": true,
+    "types": ["node"]              // important: includes Node.js types
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
