@@ -5,9 +5,13 @@
     class Jwtservice{
         public secret 
         constructor(){
-            this.secret = authConfig.jwtToken
+             this.secret = process.env.JWT_AUTH as string
         }
     
+        public   options ={
+            expireToken: authConfig.expireToken ||  3600
+        }
+
         public generateToken(admin:{id: string  , email:string , role: string}){
         const paylod={
             id : admin.id,

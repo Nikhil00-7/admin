@@ -157,3 +157,23 @@
 2025-12-01T16:55:17.036Z  INFO [hello]  Admin is. created {}
 2025-12-01T16:56:32.504Z  INFO [hello]  token is generated {}
 2025-12-01T16:57:33.923Z  INFO [hello]  admin is logged out successfully {}
+2025-12-02T13:40:43.730Z  INFO [hello]  Redis client is Connected {}
+2025-12-02T13:41:13.753Z  INFO [hello]  mongodb is failed to connect {}
+2025-12-02T13:42:51.083Z  INFO [hello]  Redis client is Connected {}
+2025-12-02T13:43:21.099Z  INFO [hello]  mongodb is failed to connect {}
+2025-12-02T13:46:52.451Z  INFO [hello]  Redis client is Connected {}
+2025-12-02T13:46:52.478Z  INFO [hello]  mongodb is connected successfull {}
+2025-12-02T13:51:03.828Z  INFO [hello]  Redis client is Connected {}
+2025-12-02T13:51:03.853Z  INFO [hello]  mongodb is connected successfull {}
+2025-12-02T13:51:48.629Z  INFO [hello]  Admin is. created {}
+2025-12-02T13:52:04.593Z  INFO [hello]  token is generated {}
+2025-12-02T14:03:07.527Z  INFO [hello]  Redis client is Connected {}
+2025-12-02T14:03:07.552Z  INFO [hello]  mongodb is connected successfull {}
+2025-12-02T14:05:06.233Z  INFO [hello]  Redis client is Connected {}
+2025-12-02T14:05:06.265Z  INFO [hello]  mongodb is connected successfull {}
+2025-12-02T14:07:44.113Z  INFO [hello]  Redis client is Connected {}
+2025-12-02T14:07:44.138Z  INFO [hello]  mongodb is connected successfull {}
+2025-12-02T14:10:59.588Z  INFO [hello]  Redis client is Connected {}
+2025-12-02T14:10:59.613Z  INFO [hello]  mongodb is connected successfull {}
+2025-12-02T14:11:24.052Z  INFO [hello]  token is generated {}
+2025-12-02T14:13:19.433Z  INFO [hello]  admin is logged out successfully {}

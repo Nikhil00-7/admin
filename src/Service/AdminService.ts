@@ -72,7 +72,7 @@ const token = await this.jwt.generateToken({
 if(!this.redisClient.isOpen){
   await this.redisClient.connect();
 }
-await this.redisClient.set(`token${token}` , JSON.stringify(token));
+await this.redisClient.set(`token${token}` , token  ,{EX : this.jwt.options.expireToken });
 logger.info("token is generated" , token);
 return res.status(200).json({token : token})
   }catch(error){
@@ -82,7 +82,7 @@ return res.status(200).json({token : token})
     }
 }
 
-public logout (req: Request , res : Response) {
+public async logout (req: Request , res : Response) {
   try{
       const header = req.headers.authorization;
       if(!header) {
@@ -90,11 +90,13 @@ public logout (req: Request , res : Response) {
       }
 
       const token = header.split(" ")[1];
-   if(!this.redisClient.isOpen)
-     {
-       this.redisClient.connect();
-     }
-        this.redisClient.del(`token${token}`);
+   if(!this.redisClient.isOpen) { this.redisClient.connect();}
+
+      const stored = await this.redisClient.get(`token${token}`);
+        
+      if(!stored){return res.status(404).json({message: "Invalid Token"});}
+
+     await  this.redisClient.del(`token${token}`);
        logger.info("admin is logged out successfully");
        return res.status(200).json({message : "admin is logged out successfully"});
      
