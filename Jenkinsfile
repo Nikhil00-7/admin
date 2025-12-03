@@ -55,6 +55,16 @@ pipeline{
          sh 'kubectl apply -f deployment.yaml'
      }
    }
+
+   stage('Archive Artifacts') {
+    steps {
+        sh 'mkdir -p artifacts'
+        sh 'cp -r build/* artifacts/'
+        sh 'cp deployment.yaml artifacts/'
+        archiveArtifacts artifacts: 'artifacts/**/*', fingerprint: true
+    }
+}
+
    
    }
 
