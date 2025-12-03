@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-app
+  namespace: default
+  labels:
+    app: admin-app
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: admin-app
+
+  template:
+    metadata:
+      labels:
+        app: admin-app
+
+    spec:
+      containers:
+        - name: admin-app
+          image: admin:01
+          ports:
+            - containerPort: 3001
