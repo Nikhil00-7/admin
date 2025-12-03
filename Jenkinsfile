@@ -1,4 +1,4 @@
-pipleline{
+pipeline{
 
    tools{
     nodejs 'node22'
