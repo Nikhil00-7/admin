@@ -5,6 +5,7 @@ pipeline{
    }
 
    environment{
+    PATH = "/usr/local/bin:${env.PATH}"
     DOCKER_IMAGE = 'admin:01'    
    }
 
