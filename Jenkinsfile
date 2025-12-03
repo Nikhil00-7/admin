@@ -6,7 +6,10 @@ pipeline{
 
    environment{
     PATH = "/usr/local/bin:${env.PATH}"
-    DOCKER_IMAGE = 'admin:01'    
+  DOCKER_USER = "docdon0007"         // your Docker Hub username
+        IMAGE_NAME = "admin"
+        IMAGE_TAG = "01"
+        DOCKER_IMAGE = "${DOCKER_USER}/${IMAGE_NAME}:${IMAGE_TAG}"  
    }
 
    stages{
