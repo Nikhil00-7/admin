@@ -31,7 +31,7 @@ pipeline{
     //     steps{
     //       sh 'npm test'
     //     }
-    }
+    
 
    stage('Docker Login & Push') {
     steps {
