@@ -32,6 +32,8 @@ pipleline{
 
    stage('Docker Login & Push') {
     steps {
+                sh "docker build -t $DOCKER_IMAGE ."
+
         withCredentials([usernamePassword(credentialsId: 'dockerhub-login', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
             sh """
                 echo $PASS | docker login -u $USER --password-stdin
